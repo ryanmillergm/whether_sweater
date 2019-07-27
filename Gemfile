@@ -5,6 +5,7 @@ ruby '2.4.1'
 
 gem 'figaro'
 gem 'faraday'
+gem 'fast_jsonapi'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -42,8 +43,12 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'factory_bot_rails'
   gem 'pry'
   gem 'simplecov'
+  gem 'vcr'
+  gem 'webmock'
+  gem 'shoulda-matchers'
 end
 
 group :development do
