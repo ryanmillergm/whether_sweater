@@ -1,7 +1,14 @@
 class ForecastFacade
+  attr_reader :location,
+              :forecast_coordinates,
+              :id
+  attr_accessor :forecast
+
   def initialize(location)
     @location = location
     @forecast_coordinates
+    @id = location
+    @forecast = get_coordinates
   end
 
   def get_coordinates

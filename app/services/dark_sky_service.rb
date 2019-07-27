@@ -1,4 +1,7 @@
 class DarkSkyService
+  attr_reader :id,
+              :coordinates
+              
   def initialize(coordinates)
     @coordinates = coordinates
     @id = 1
