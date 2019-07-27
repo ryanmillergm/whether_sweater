@@ -20,8 +20,13 @@
 /node_modules
 /yarn-error.log
 
+/coverage
+
 /public/assets
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore application configuration
+/config/application.yml
