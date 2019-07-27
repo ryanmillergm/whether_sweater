@@ -1,6 +1,6 @@
 class ForecastSerializer
   include FastJsonapi::ObjectSerializer
-  binding.pry
-
+  attributes :city,
+             :state
 
 end
