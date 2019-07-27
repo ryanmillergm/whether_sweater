@@ -3,10 +3,6 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      namespace :forecast do
-        get '/forecast', to: 'forecast#index'
-      end
-
       resources :forecast, only: [:index]
     end
   end
