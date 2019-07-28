@@ -20,5 +20,6 @@ RSpec.describe 'Users' do
     expect(response).to be_successful
 
     expect(result).to eq(api_key)
+    expect(response.status).to eq(200)
   end
 end

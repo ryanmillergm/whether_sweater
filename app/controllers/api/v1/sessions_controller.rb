@@ -1,10 +1,10 @@
 class Api::V1::SessionsController < ApplicationController
-  
+
   def create
     user = User.find_by(email: session_params[:email])
     if user&.authenticate(session_params[:password])
       session[:user_id] = user.id
-      render json: {api_key: user.api_key}, status: :created
+      render json: {api_key: user.api_key}, status: :ok
     else
       render json: { errors: user.errors.full_messages }, status: 422
     end
