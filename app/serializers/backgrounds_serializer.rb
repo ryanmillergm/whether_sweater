@@ -1,5 +1,5 @@
-class ForecastSerializer
+class BackgroundsSerializer
   include FastJsonapi::ObjectSerializer
   attributes :id,
-             :forecast
+             :background
 end
