@@ -5,12 +5,11 @@ class Api::V1::UsersController < ApplicationController
 
   def create
     user = User.new(user_params)
-    user.save
     if user.save
       user.api_key = SecureRandom.urlsafe_base64.to_s
       render json: {api_key: user.api_key}, status: :created
     elsif
-      render nothing: true, status: :bad_request
+      render json: { errors: user.errors.full_messages }, status: 422
     end
   end
 
@@ -18,5 +17,9 @@ class Api::V1::UsersController < ApplicationController
 
   def user_params
     params.permit(:email, :password, :password_confirmation)
+  end
+
+  def set_api
+
   end
 end
