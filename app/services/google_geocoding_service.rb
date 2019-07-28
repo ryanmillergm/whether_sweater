@@ -1,10 +1,8 @@
 class GoogleGeocodingService
-  attr_reader :id,
-              :location
-              
+  attr_reader :location
+
   def initialize(location)
     @location = location
-    @id = 1
   end
 
   def location_to_coordinates

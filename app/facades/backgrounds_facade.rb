@@ -1,9 +1,13 @@
 class BackgroundsFacade
-  attr_reader :location
+  attr_reader :location,
+              :id
+
+  attr_accessor :background
 
   def initialize(location)
     @location = location
     @background = get_background
+    @id = location
   end
 
   def get_background

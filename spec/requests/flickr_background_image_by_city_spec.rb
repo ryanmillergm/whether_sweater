@@ -9,6 +9,6 @@ RSpec.describe 'Flickr API' do
 
     background_img = JSON.parse(response.body, symbolize_names: true)
 
-    
+    expect(background_img[:data][:id]).to eq('denver,co')
   end
 end

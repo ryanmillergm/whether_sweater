@@ -1,10 +1,8 @@
 class DarkSkyService
-  attr_reader :id,
-              :coordinates
-              
+  attr_reader :coordinates
+
   def initialize(coordinates)
     @coordinates = coordinates
-    @id = 1
   end
 
   def forecast
