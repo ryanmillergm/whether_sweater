@@ -5,7 +5,7 @@ class Api::V1::UsersController < ApplicationController
     if user.save
       user.api_key = SecureRandom.urlsafe_base64.to_s
       render json: {api_key: user.api_key}, status: :created
-    elsif
+    else
       render json: { errors: user.errors.full_messages }, status: 422
     end
   end

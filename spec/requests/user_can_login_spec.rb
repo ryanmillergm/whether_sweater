@@ -15,8 +15,10 @@ RSpec.describe 'Users' do
 
     post '/api/v1/sessions', params: body
 
+    result = JSON.parse(response.body, symbolize_names: true)
+
     expect(response).to be_successful
 
-    expect(response.body).to eq(api_key)
+    expect(result).to eq(api_key)
   end
 end
