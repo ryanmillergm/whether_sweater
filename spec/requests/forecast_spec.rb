@@ -6,6 +6,21 @@ RSpec.describe 'Forecasts' do
     get '/api/v1/forecast?location=denver,co'
 
     expect(response).to be_successful
-    binding.pry
+
+    weather = JSON.parse(response.body, symbolize_names: true)
+
+    expect(weather[:data][:attributes][:id]).to eq("denver,co")
   end
-end 
+
+  it 'gets latitude and longitude from geocoding' do
+
+    get '/api/v1/forecast?location=aurora,co'
+
+    expect(response).to be_successful
+
+    weather = JSON.parse(response.body, symbolize_names: true)
+
+    expect(weather[:data][:attributes][:id]).to eq("aurora,co")
+  end
+  
+end
