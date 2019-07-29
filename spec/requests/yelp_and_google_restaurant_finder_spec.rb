@@ -8,7 +8,6 @@ RSpec.describe 'Google and Yelp API' do
 
       result = JSON.parse(response.body, symbolize_names: true)
 
-      binding.pry
       expect(response).to be_successful
     end
   end
