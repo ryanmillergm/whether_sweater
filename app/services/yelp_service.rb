@@ -30,8 +30,6 @@ class YelpService
     end
     results = JSON.parse(yelp_response.body, symbolize_names: true)[:businesses]
 
-    get_restaurants(results)
-
     @restaurants = results.each do |result|
       Restaurant.new(result)
     end
