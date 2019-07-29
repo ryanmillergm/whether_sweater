@@ -7,7 +7,7 @@ class Api::V1::MunchiesController < ApplicationController
     #https://maps.googleapis.com/maps/api/directions/json?origin=denver,co&destination=pueblo,co&key=AIzaSyDXJ9V7QreVlZEn-EPF4yMOrUCFrv4xdow
     # travel_time = JSON.parse(google_response.body, symbolize_names: true)[:routes][0][:legs][0][:duration][:text].split.first.to_i
     # travel_time_interval_type = JSON.parse(google_response.body, symbolize_names: true)[:routes][0][:legs][0][:duration][:text].split[1]
-    #
+    # 
     #
     # params[:start]
     # params[:end]
