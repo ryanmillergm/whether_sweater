@@ -1,5 +1,7 @@
 class Restaurant
   def initialize(attributes = {})
-    @argument = argument
+    @city = attributes[:name]
+    @name =  attributes[:location][:city]
+    @address = attributes[:location][:address1]
   end
 end

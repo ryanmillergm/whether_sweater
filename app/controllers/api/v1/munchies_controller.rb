@@ -14,11 +14,9 @@ class Api::V1::MunchiesController < ApplicationController
     yelp_response = Faraday.get("https://api.yelp.com/v3/businesses/search?location=pueblo,co&term=food&categories=chinese&open_at=1564419210&imit=3") do |f|
       f.headers = { Authorization: "Bearer #{ENV["YELP_API_KEY"]}" }
       end
-
-    results = JSON.parse(yelp_response.body, symbolize_names: true)
+    results = JSON.parse(yelp_response.body, symbolize_names: true)[:businesses]
 
     @restaurants = results.each do |result|
-      binding.pry
       Restaurant.new(result)
     end
   end
