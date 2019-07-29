@@ -1,4 +1,8 @@
 class Restaurant
+  attr_reader :city,
+              :name,
+              :address
+              
   def initialize(attributes = {})
     @city = attributes[:name]
     @name =  attributes[:location][:city]
