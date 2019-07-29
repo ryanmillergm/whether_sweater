@@ -8,7 +8,7 @@ class Api::V1::UsersController < ApplicationController
       user.update(api_key: api_key)
       render json: {api_key: user.api_key}, status: :created
     else
-      render json: { errors: user.errors.full_messages }, status: 422
+      render json: { errors: user.errors.full_messages }, status: 401
     end
   end
 

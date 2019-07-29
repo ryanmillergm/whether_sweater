@@ -28,6 +28,6 @@ RSpec.describe 'Users' do
 
     post '/api/v1/users', params: body
 
-    expect(response.status).to eq(422)
+    expect(response.status).to eq(401)
   end
 end
