@@ -15,7 +15,7 @@ class YelpService
   end
 
   def get_restaurant_list
-    fetch_data("https://api.yelp.com/v3/businesses/search?location=#{@location}&term=food&categories=#{food_type}&open_at=#{get_time}&imit=3")
+    fetch_data("https://api.yelp.com/v3/businesses/search?location=#{@location}&term=food&categories=#{food_type}&open_at=#{get_time}&limit=3")
   end
 
   def get_time
@@ -29,8 +29,7 @@ class YelpService
       f.headers = { Authorization: "Bearer #{ENV["YELP_API_KEY"]}" }
     end
     results = JSON.parse(yelp_response.body, symbolize_names: true)[:businesses]
-
-    @restaurants = results.each do |result|
+    @restaurants = results.map do |result|
       Restaurant.new(result)
     end
     @restaurants

@@ -5,7 +5,7 @@ class RestaurantFinderFacade
               :id,
               :travel_time,
               :restaurants
-              
+
   def initialize(attributes = {})
     @start = attributes[:start]
     @end = attributes[:end]
