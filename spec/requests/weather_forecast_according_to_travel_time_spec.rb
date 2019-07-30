@@ -43,8 +43,12 @@ RSpec.describe "Google and Weather API" do
     post '/api/v1/road_trip', params: body
 
     result = JSON.parse(response.body, symbolize_names: true)
-
+    
     expect(response).to have_http_status(401)
     expect(result[:message]).to eq("credentials were bad")
+  end
+
+  it "will give you the current weather" do
+
   end
 end

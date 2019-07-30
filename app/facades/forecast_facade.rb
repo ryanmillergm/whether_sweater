@@ -8,7 +8,7 @@ class ForecastFacade
   def initialize(location)
     @location = location
     @forecast_coordinates
-    @id = location
+    @id = "Weather"
     @forecast = get_coordinates
   end
 
@@ -18,8 +18,15 @@ class ForecastFacade
     get_forecast
   end
 
-  def get_forecast
-    forecast = dark_sky_service.forecast
+  def current_weather
+    { currently: CurrentWeather.new(dark_sky_service.forecast["currently"]) }
+  end
+
+  def get_hourly_forecast
+    hourly_forecast = dark_sky_service.forecast["hourly"]["data"]
+    hourly_forecast.each do |forecast|
+      HourlyForecast.new(forecast)
+    end
   end
 
   private

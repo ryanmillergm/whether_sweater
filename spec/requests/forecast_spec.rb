@@ -8,7 +8,7 @@ RSpec.describe 'Forecasts' do
     expect(response).to be_successful
 
     weather = JSON.parse(response.body, symbolize_names: true)
-
+    binding.pry
     expect(weather[:data][:attributes][:id]).to eq("denver,co")
   end
 
@@ -22,5 +22,5 @@ RSpec.describe 'Forecasts' do
 
     expect(weather[:data][:attributes][:id]).to eq("aurora,co")
   end
-  
+
 end
