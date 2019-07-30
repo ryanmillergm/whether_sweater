@@ -1,6 +1,5 @@
 class ForecastFacade
   attr_reader :location,
-              :forecast_coordinates,
               :id
 
   attr_accessor :forecast
@@ -18,7 +17,7 @@ class ForecastFacade
   end
 
   def current_weather
-     CurrentWeather.new(dark_sky_service.forecast["currently"]) 
+     CurrentWeather.new(dark_sky_service.forecast["currently"])
   end
 
   def hourly_forecast

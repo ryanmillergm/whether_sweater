@@ -1,7 +1,4 @@
 class Coordinates
-  attr_reader :latitude,
-              :longitude
-
   def initialize(attributes = {})
     @latitude = attributes[:lat]
     @longitude = attributes[:lng]

@@ -1,4 +1,4 @@
 class RoadTripSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :forecast
+  attributes :get_road_trip_forecast
 end
