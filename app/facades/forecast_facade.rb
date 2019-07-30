@@ -15,16 +15,15 @@ class ForecastFacade
   def get_coordinates
     coordinates = geocoding_service.location_to_coordinates
     @forecast_coordinates = geocoding_service.location_to_coordinates
-    get_forecast
   end
 
   def current_weather
     { currently: CurrentWeather.new(dark_sky_service.forecast["currently"]) }
   end
 
-  def get_hourly_forecast
+  def hourly_forecast
     hourly_forecast = dark_sky_service.forecast["hourly"]["data"]
-    hourly_forecast.each do |forecast|
+    hourly_forecast.first(8).map do |forecast|
       HourlyForecast.new(forecast)
     end
   end

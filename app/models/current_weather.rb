@@ -1,17 +1,5 @@
 class CurrentWeather
-  attr_reader :id,
-              :time,
-              :summary,
-              :icon,
-              :precip_probablility,
-              :temperature,
-              :apparent_temperature,
-              :humidity,
-              :uv_index,
-              :visibility
-
   def initialize(forecast)
-    @id = "Current Weather"
     @time = forecast["time"]
     @summary = forecast["summary"]
     @icon = forecast["icon"]

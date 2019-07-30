@@ -8,8 +8,8 @@ RSpec.describe 'Forecasts' do
     expect(response).to be_successful
 
     weather = JSON.parse(response.body, symbolize_names: true)
-    binding.pry
-    expect(weather[:data][:attributes][:id]).to eq("denver,co")
+
+    expect(weather[:data][:attributes][:location]).to eq("denver,co")
   end
 
   it 'gets latitude and longitude from geocoding' do
@@ -20,7 +20,7 @@ RSpec.describe 'Forecasts' do
 
     weather = JSON.parse(response.body, symbolize_names: true)
 
-    expect(weather[:data][:attributes][:id]).to eq("aurora,co")
+    expect(weather[:data][:attributes][:location]).to eq("aurora,co")
   end
 
 end
