@@ -28,6 +28,13 @@ class ForecastFacade
     end
   end
 
+  def daily_forecast
+    daily_forecast = dark_sky_service.forecast["daily"]["data"]
+    daily_forecast.first(5).map do |forecast|
+      DailyForecast.new(forecast)
+    end
+  end
+
   private
 
   def geocoding_service
