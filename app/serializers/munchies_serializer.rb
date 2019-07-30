@@ -1,6 +1,8 @@
 class MunchiesSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :end,
-             :restaurants
+  attributes :end
 
+  attributes :restaurant_list do |object|
+    object.get_restaurants
+  end
 end

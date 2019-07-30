@@ -1,0 +1,54 @@
+require 'rails_helper'
+
+RSpec.describe "Google and Weather API" do
+  before :each do
+    @user = User.create(email: "whatever@example.com", password: "password", api_key: "jgn983hy48thw9begh98h4539h4" )
+  end
+
+  it "can forecast the weather of a location at the time of expected arrival" do
+
+    body = { origin: "Denver,CO",
+      destination: "Pueblo,CO",
+      api_key: "jgn983hy48thw9begh98h4539h4"
+    }
+
+    post '/api/v1/road_trip', params: body
+
+    expect(response).to be_successful
+    forecast = JSON.parse(response.body, symbolize_names: true)
+
+  end
+
+  it "can forecast the weather of a location at the time of expected arrival" do
+
+    body = { origin: "Denver,CO",
+      destination: "Aurora,CO",
+      api_key: "jgn983hy48thw9begh98h4539h4"
+    }
+
+    post '/api/v1/road_trip', params: body
+
+    expect(response).to be_successful
+
+    forecast = JSON.parse(response.body, symbolize_names: true)
+  end
+
+  it "will give error if users api key is not valid" do
+
+    body = { origin: "Denver,CO",
+      destination: "Pueblo,CO",
+      api_key: "fake"
+    }
+
+    post '/api/v1/road_trip', params: body
+
+    result = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response).to have_http_status(401)
+    expect(result[:message]).to eq("credentials were bad")
+  end
+
+  it "will give you the current weather" do
+
+  end
+end

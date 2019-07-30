@@ -1,10 +1,6 @@
 class RestaurantFinderFacade
-  attr_reader :start,
-              :end,
-              :food,
-              :id,
-              :travel_time,
-              :restaurants
+  attr_reader :end,
+              :id
 
   def initialize(attributes = {})
     @start = attributes[:start]
@@ -12,11 +8,11 @@ class RestaurantFinderFacade
     @food = attributes[:food]
     @id = @food
     @travel_time = nil
-    @restaurants = get_restaurants
   end
 
   def get_restaurants
-    @travel_time = google_directions_service.get_time
+    travel_time = google_directions_service.get_time
+    @travel_time = (Time.now + travel_time).to_i
     yelp_service.get_restaurant_list
   end
 

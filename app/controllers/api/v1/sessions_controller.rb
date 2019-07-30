@@ -7,7 +7,7 @@ class Api::V1::SessionsController < ApplicationController
       session[:user_id] = user.id
       render json: {api_key: user.api_key}, status: :created
     else
-      render json: { errors: user.errors.full_messages }, status: 422
+      render json: { message: "email or password was invalid" }, status: 401
     end
   end
 

@@ -11,24 +11,25 @@ class GoogleDirectionsService
   end
 
   def get_time
-    fetch_data("https://maps.googleapis.com/maps/api/directions/json?origin=#{@start}&destination=#{@end_point}&key=#{ENV['GOOGLE_MAPS_API_KEY']}")
+    fetch_data("https://maps.googleapis.com/maps/api/directions/json?}")
   end
 
   private
 
+  def parameters
+    {
+      origin: @start,
+      destination: @end_point,
+      key: ENV['GOOGLE_MAPS_API_KEY']
+    }
+  end
+
   def fetch_data(url)
-    google_response = Faraday.get(url)
-    travel_time = JSON.parse(google_response.body, symbolize_names: true)[:routes][0][:legs][0][:duration][:text].split
-    time_to_seconds(travel_time)
+    google_response = Faraday.get(url, parameters)
+    travel_time = JSON.parse(google_response.body, symbolize_names: true)[:routes][0][:legs][0][:duration][:value]
   end
 
   def time_to_seconds(travel_time)
-    if travel_time[1] == "hour"
-      (travel_time[0].to_i * 60 * 60) + (travel_time[2].to_i * 60 )
-    elsif travel_time[1] ==  "mins"
-      travel_time[0] * 60
-    end
+    (Time.now + travel_time).to_i
   end
 end
-# oogle_response = Faraday.get("https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=AIzaSyDXJ9V7QreVlZEn-EPF4yMOrUCFrv4xdow")
-#https://maps.googleapis.com/maps/api/directions/json?origin=denver,co&destination=pueblo,co&key=AIzaSyDXJ9V7QreVlZEn-EPF4yMOrUCFrv4xdow
