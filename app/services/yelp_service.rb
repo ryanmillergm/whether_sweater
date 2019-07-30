@@ -15,11 +15,7 @@ class YelpService
   end
 
   def get_restaurant_list
-    fetch_data("https://api.yelp.com/v3/businesses/search?location=#{@location}&term=food&categories=#{food_type}&open_at=#{get_time}&limit=3")
-  end
-
-  def get_time
-    (Time.now + @travel_time).to_i
+    fetch_data("https://api.yelp.com/v3/businesses/search?location=#{@location}&term=food&categories=#{food_type}&open_at=#{@travel_time}&limit=3")
   end
 
   private

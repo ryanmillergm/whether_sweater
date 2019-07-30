@@ -6,7 +6,11 @@ class DarkSkyService
   end
 
   def forecast
-    fetch_data("https://api.darksky.net/forecast/e977d6ad9df0d1da66363ab4434d9707/#{@coordinates.latitude},#{@coordinates.longitude}")
+    fetch_data("https://api.darksky.net/forecast/#{ENV['DARK_SKY_API']}/#{@coordinates[:lat]},#{@coordinates[:lng]}")
+  end
+
+  def future_forecast(arrival_time)
+    fetch_data("https://api.darksky.net/forecast/#{ENV['DARK_SKY_API']}/#{@coordinates[:lat]},#{@coordinates[:lng]},#{arrival_time}")
   end
 
   private

@@ -2,6 +2,7 @@ class ForecastFacade
   attr_reader :location,
               :forecast_coordinates,
               :id
+
   attr_accessor :forecast
 
   def initialize(location)
@@ -13,7 +14,7 @@ class ForecastFacade
 
   def get_coordinates
     coordinates = geocoding_service.location_to_coordinates
-    @forecast_coordinates = Coordinates.new(coordinates)
+    @forecast_coordinates = geocoding_service.location_to_coordinates
     get_forecast
   end
 
