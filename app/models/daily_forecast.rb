@@ -1,6 +1,6 @@
 class DailyForecast
   def initialize(forecast)
-    @time = Time.at(forecast["time"]).strftime("%A")
+    @day = Time.at(forecast["time"]).strftime("%A")
     @icon = forecast["icon"]
     @summary = forecast["summary"]
     @prec_type = forecast["precipType"]

@@ -18,7 +18,7 @@ class ForecastFacade
   end
 
   def current_weather
-    { currently: CurrentWeather.new(dark_sky_service.forecast["currently"]) }
+     CurrentWeather.new(dark_sky_service.forecast["currently"]) 
   end
 
   def hourly_forecast
