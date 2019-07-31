@@ -10,7 +10,9 @@ class BackgroundsFacade
   end
 
   def get_background
-    flickr_service.background_image_by_city(@location)
+    Rails.cache.fetch("get_background", expires_in: 12.hours) do
+      flickr_service.background_image_by_city(@location)
+    end
   end
 
   private

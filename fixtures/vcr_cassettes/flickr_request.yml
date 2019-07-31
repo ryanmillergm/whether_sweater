@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.flickr.com/services/rest/?api_key=d9107066bb9542e17990e7df43a630de&method=flickr.photos.getRecent&nojsoncallback=1&per_page=1&safe_search=3&tag_mode=all&tags%5B%5D=denver,co&tags%5B%5D=downtown&tags%5B%5D=park&tags%5B%5D=view
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '213'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 31 Jul 2019 16:58:45 GMT
+      Server:
+      - Apache/2.4.39 (Ubuntu)
+      X-Robots-Tag:
+      - noindex
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 8c270439933ced44d65299aefd6e8969.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - ORD50
+      X-Amz-Cf-Id:
+      - fC3cgi43iztRK832S4fEoFc-W-rC9Ns22JapIkVIJQDbyUWWBRi3mw==
+    body:
+      encoding: ASCII-8BIT
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<rsp stat=\"ok\">\n<photos
+        page=\"1\" pages=\"1000\" perpage=\"1\" total=\"1000\">\n\t<photo id=\"48424037496\"
+        owner=\"122619534@N05\" secret=\"bd01ba6ce0\" server=\"65535\" farm=\"66\"
+        title=\"\" ispublic=\"1\" isfriend=\"0\" isfamily=\"0\" />\n</photos>\n</rsp>\n"
+    http_version: 
+  recorded_at: Wed, 31 Jul 2019 16:58:43 GMT
+recorded_with: VCR 5.0.0
