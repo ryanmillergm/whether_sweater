@@ -17,7 +17,7 @@ class RoadTripFacade
     arrival_time = (Time.now + @travel_time).to_i
     @coordinates = google_geocoding_service.location_to_coordinates
     FutureForecast.new(dark_sky_service.future_forecast(arrival_time)["currently"], @travel_time)
-  end
+  end 
 
   private
 

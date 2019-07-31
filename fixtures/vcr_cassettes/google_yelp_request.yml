@@ -476,4 +476,176 @@ http_interactions:
         {"center": {"longitude": -104.5733642578125, "latitude": 38.27035217485165}}}'
     http_version: 
   recorded_at: Wed, 31 Jul 2019 19:16:22 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?categories=chinese&limit=3&location=pueblo,co&open_at=1564615206&term=food
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer -Gv9fi9ZE7LvASbh3SN31jsSXi-BCWZuefIbuIOa6G9oXGeyTA6yJL7sdAGZ3A6FxVL_66_LHxeXhSWeOUz0Zl7yimKKpYnms2bBYlUqTnG8PfHOMHMtfHU1Xv8-XXYx
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4972'
+      Ratelimit-Resettime:
+      - '2019-08-01T00:00:00+00:00'
+      X-Zipkin-Id:
+      - edc89451f85f9064
+      X-B3-Sampled:
+      - '0'
+      X-Proxied:
+      - 10-64-66-176-uswest1aprod
+      Transfer-Encoding:
+      - chunked
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Wed, 31 Jul 2019 21:33:14 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-den19623-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "kQxM1xlaZfQmXpKaqMTNnw", "alias": "wonderful-bistro-pueblo",
+        "name": "Wonderful Bistro", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/EIPRzs68vSrQ_2tCf5pQNw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/wonderful-bistro-pueblo?adjust_creative=46hDN7W2hsnoMzhkhO5zNw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=46hDN7W2hsnoMzhkhO5zNw",
+        "review_count": 57, "categories": [{"alias": "chinese", "title": "Chinese"}],
+        "rating": 4.0, "coordinates": {"latitude": 38.319366, "longitude": -104.616623},
+        "transactions": [], "price": "$$", "location": {"address1": "4602 N Elizabeth
+        St", "address2": "Ste 120", "address3": "", "city": "Pueblo", "zip_code":
+        "81008", "country": "US", "state": "CO", "display_address": ["4602 N Elizabeth
+        St", "Ste 120", "Pueblo, CO 81008"]}, "phone": "+17195440233", "display_phone":
+        "(719) 544-0233", "distance": 6632.28027227077}, {"id": "M4MwxQAA58B7ENV8ootI-w",
+        "alias": "kans-kitchen-pueblo", "name": "Kan''s Kitchen", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/ZZVNpsvc_x6p5iY8CCpzUg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/kans-kitchen-pueblo?adjust_creative=46hDN7W2hsnoMzhkhO5zNw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=46hDN7W2hsnoMzhkhO5zNw",
+        "review_count": 17, "categories": [{"alias": "chinese", "title": "Chinese"},
+        {"alias": "hotdogs", "title": "Fast Food"}], "rating": 4.0, "coordinates":
+        {"latitude": 38.2401504516602, "longitude": -104.643249511719}, "transactions":
+        [], "price": "$", "location": {"address1": "1620 S Prairie Ave", "address2":
+        null, "address3": null, "city": "Pueblo", "zip_code": "81005", "country":
+        "US", "state": "CO", "display_address": ["1620 S Prairie Ave", "Pueblo, CO
+        81005"]}, "phone": "+17195660209", "display_phone": "(719) 566-0209", "distance":
+        6971.117622629485}, {"id": "xYK1XFa4glGAaqvPQ4KW3g", "alias": "tea-palace-pueblo",
+        "name": "Tea Palace", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/WqFjNALXAjrMUDOnIk1QAw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/tea-palace-pueblo?adjust_creative=46hDN7W2hsnoMzhkhO5zNw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=46hDN7W2hsnoMzhkhO5zNw",
+        "review_count": 27, "categories": [{"alias": "chinese", "title": "Chinese"}],
+        "rating": 4.0, "coordinates": {"latitude": 38.3342042993682, "longitude":
+        -104.742797694933}, "transactions": ["pickup"], "price": "$$", "location":
+        {"address1": "46 S Dunlap Dr", "address2": "", "address3": "", "city": "Pueblo",
+        "zip_code": "81007", "country": "US", "state": "CO", "display_address": ["46
+        S Dunlap Dr", "Pueblo, CO 81007"]}, "phone": "+17195478288", "display_phone":
+        "(719) 547-8288", "distance": 16401.249101815272}], "total": 10, "region":
+        {"center": {"longitude": -104.5733642578125, "latitude": 38.27035217485165}}}'
+    http_version: 
+  recorded_at: Wed, 31 Jul 2019 21:33:14 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?categories=chinese&limit=3&location=pueblo,co&open_at=1564615240&term=food
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer -Gv9fi9ZE7LvASbh3SN31jsSXi-BCWZuefIbuIOa6G9oXGeyTA6yJL7sdAGZ3A6FxVL_66_LHxeXhSWeOUz0Zl7yimKKpYnms2bBYlUqTnG8PfHOMHMtfHU1Xv8-XXYx
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4971'
+      Ratelimit-Resettime:
+      - '2019-08-01T00:00:00+00:00'
+      X-Zipkin-Id:
+      - 67d590280ae845ea
+      X-B3-Sampled:
+      - '0'
+      X-Proxied:
+      - 10-69-109-59-uswest2aprod
+      Transfer-Encoding:
+      - chunked
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Wed, 31 Jul 2019 21:33:47 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-den19647-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "kQxM1xlaZfQmXpKaqMTNnw", "alias": "wonderful-bistro-pueblo",
+        "name": "Wonderful Bistro", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/EIPRzs68vSrQ_2tCf5pQNw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/wonderful-bistro-pueblo?adjust_creative=46hDN7W2hsnoMzhkhO5zNw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=46hDN7W2hsnoMzhkhO5zNw",
+        "review_count": 57, "categories": [{"alias": "chinese", "title": "Chinese"}],
+        "rating": 4.0, "coordinates": {"latitude": 38.319366, "longitude": -104.616623},
+        "transactions": [], "price": "$$", "location": {"address1": "4602 N Elizabeth
+        St", "address2": "Ste 120", "address3": "", "city": "Pueblo", "zip_code":
+        "81008", "country": "US", "state": "CO", "display_address": ["4602 N Elizabeth
+        St", "Ste 120", "Pueblo, CO 81008"]}, "phone": "+17195440233", "display_phone":
+        "(719) 544-0233", "distance": 6632.28027227077}, {"id": "M4MwxQAA58B7ENV8ootI-w",
+        "alias": "kans-kitchen-pueblo", "name": "Kan''s Kitchen", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/ZZVNpsvc_x6p5iY8CCpzUg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/kans-kitchen-pueblo?adjust_creative=46hDN7W2hsnoMzhkhO5zNw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=46hDN7W2hsnoMzhkhO5zNw",
+        "review_count": 17, "categories": [{"alias": "chinese", "title": "Chinese"},
+        {"alias": "hotdogs", "title": "Fast Food"}], "rating": 4.0, "coordinates":
+        {"latitude": 38.2401504516602, "longitude": -104.643249511719}, "transactions":
+        [], "price": "$", "location": {"address1": "1620 S Prairie Ave", "address2":
+        null, "address3": null, "city": "Pueblo", "zip_code": "81005", "country":
+        "US", "state": "CO", "display_address": ["1620 S Prairie Ave", "Pueblo, CO
+        81005"]}, "phone": "+17195660209", "display_phone": "(719) 566-0209", "distance":
+        6971.117622629485}, {"id": "xYK1XFa4glGAaqvPQ4KW3g", "alias": "tea-palace-pueblo",
+        "name": "Tea Palace", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/WqFjNALXAjrMUDOnIk1QAw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/tea-palace-pueblo?adjust_creative=46hDN7W2hsnoMzhkhO5zNw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=46hDN7W2hsnoMzhkhO5zNw",
+        "review_count": 27, "categories": [{"alias": "chinese", "title": "Chinese"}],
+        "rating": 4.0, "coordinates": {"latitude": 38.3342042993682, "longitude":
+        -104.742797694933}, "transactions": ["pickup"], "price": "$$", "location":
+        {"address1": "46 S Dunlap Dr", "address2": "", "address3": "", "city": "Pueblo",
+        "zip_code": "81007", "country": "US", "state": "CO", "display_address": ["46
+        S Dunlap Dr", "Pueblo, CO 81007"]}, "phone": "+17195478288", "display_phone":
+        "(719) 547-8288", "distance": 16401.249101815272}], "total": 10, "region":
+        {"center": {"longitude": -104.5733642578125, "latitude": 38.27035217485165}}}'
+    http_version: 
+  recorded_at: Wed, 31 Jul 2019 21:33:47 GMT
 recorded_with: VCR 5.0.0
