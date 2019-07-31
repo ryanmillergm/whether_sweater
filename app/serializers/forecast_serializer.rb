@@ -5,8 +5,4 @@ class ForecastSerializer
              :hourly_forecast,
              :daily_forecast
 
-   # attributes :forecast do |object|
-   #   object.current_weather
-   #   object.get_hourly_forecast
-   # end
 end

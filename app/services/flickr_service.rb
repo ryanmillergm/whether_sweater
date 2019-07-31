@@ -19,7 +19,8 @@ class FlickrService
       per_page: 1,
       tags: array,
       safe_search: 3,
-      tag_mode: "all"
+      tag_mode: "all",
+      nojsoncallback: 1
     }
   end
 

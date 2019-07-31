@@ -29,10 +29,6 @@ class RoadTripFacade
     @google_geocoding_service ||= GoogleGeocodingService.new(@destination)
   end
 
-  def yelp_service
-    @yelp_service ||= YelpService.new(nil, @distination, @travel_time)
-  end
-
   def dark_sky_service
     @dark_sky_service ||= DarkSkyService.new(@coordinates)
   end

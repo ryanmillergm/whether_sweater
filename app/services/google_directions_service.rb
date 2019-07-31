@@ -11,7 +11,7 @@ class GoogleDirectionsService
   end
 
   def get_time
-    fetch_data("https://maps.googleapis.com/maps/api/directions/json?}")
+    fetch_data("https://maps.googleapis.com/maps/api/directions/json?")
   end
 
   private
