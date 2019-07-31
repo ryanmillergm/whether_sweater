@@ -5,7 +5,6 @@ class FlickrService
 
   def background_image_by_city(location)
     @location = location
-    background_parameters
     fetch_data(background_parameters)
   end
 
@@ -34,6 +33,7 @@ class FlickrService
        nojsoncallback: 1
      }
   end
+end
 
 
 
@@ -78,4 +78,3 @@ class FlickrService
   #   response = Faraday.get(url, parameters)
   #   JSON.parse(Hash.from_xml(response.body).to_json, symbolize_names: true)
   # end
-end
