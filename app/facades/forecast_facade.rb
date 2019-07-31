@@ -22,6 +22,7 @@ class ForecastFacade
 
   def hourly_forecast
     hourly_forecast = dark_sky_service.forecast["hourly"]["data"]
+    binding.pry
     hourly_forecast.first(8).map do |forecast|
       HourlyForecast.new(forecast)
     end

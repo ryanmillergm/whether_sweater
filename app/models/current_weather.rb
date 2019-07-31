@@ -1,9 +1,19 @@
 class CurrentWeather
+  attr_reader :time,
+              :summary,
+              :icon,
+              :precip_probablility,
+              :temperature,
+              :apparent_temperature,
+              :humidity,
+              :uv_index,
+              :visibility
+              
   def initialize(forecast)
     @time = format_time(forecast["time"])
     @summary = forecast["summary"]
     @icon = forecast["icon"]
-    @precip_probablility = forecast["precipProbablility"]
+    @precip_probablility = forecast["precipProbability"]
     @temperature = forecast["temperature"]
     @apparent_temperature = forecast["apparentTemperature"]
     @humidity = forecast["humidity"]
