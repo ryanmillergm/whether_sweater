@@ -1,4 +1,6 @@
 class FlickrService
+  attr_reader :location
+
   def initialize
     @location = nil
   end
