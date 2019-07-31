@@ -1,32 +1,40 @@
 require 'rails_helper'
 
-RSpec.describe HourlyForecast, type: :model do
+RSpec.describe DailyForecast, type: :model do
   before :each do
-    @current_weather_hash =  {
-      "time"=>1564671600,
+    @daily_weather_forecast =  {
+      "time"=>1564592400,
       "summary"=>"Mostly Cloudy",
       "icon"=>"partly-cloudy-day",
       "precipIntensity"=>0,
       "precipProbability"=>0,
-      "temperature"=>72.26,
-      "apparentTemperature"=>72.26,
-      "dewPoint"=>55.75,
-      "humidity"=>0.56,
-      "pressure"=>1015.31,
-      "windSpeed"=>4.55,
-      "windGust"=>5.87,
-      "windBearing"=>299,
-      "cloudCover"=>0.58,
-      "uvIndex"=>3,
-      "visibility"=>10,
-      "ozone"=>296.4
+      "temperature"=>84.97,
+      "apparentTemperature"=>84.97,
+      "dewPoint"=>46.8,
+      "humidity"=>0.27,
+      "precipType"=>"Rain",
+      "pressure"=>1014.93,
+      "temperatureHigh"=>86.47,
+      "temperatureLow"=>79.42,
+      "windSpeed"=>12.55,
+      "windGust"=>17.88,
+      "windBearing"=>38,
+      "cloudCover"=>0.52,
+      "uvIndex"=>6,
+      "visibility"=>4.472,
+      "ozone"=>296.8
     }
   end
 
   it "test attributes" do
-    current_weather = HourlyForecast.new(@current_weather_hash )
-    expect(current_weather.hour).to eq(9)
-    expect(current_weather.icon).to eq("partly-cloudy-day")
-    expect(current_weather.temperature).to eq(72.26)
+    daily_weather = DailyForecast.new(@daily_weather_forecast )
+    expect(daily_weather.day).to eq("Wednesday")
+    expect(daily_weather.icon).to eq("partly-cloudy-day")
+    expect(daily_weather.summary).to eq("Mostly Cloudy")
+
+    expect(daily_weather.prec_type).to eq("Rain")
+    expect(daily_weather.precip_probability).to eq(0)
+    expect(daily_weather.temperature_high).to eq(86.47)
+    expect(daily_weather.temperature_low).to eq(79.42)
   end
 end

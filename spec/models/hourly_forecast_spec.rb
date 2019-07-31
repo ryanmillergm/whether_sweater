@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe HourlyForecast, type: :model do
   before :each do
-    @current_weather_hash =  {
+    @hourly_weather_forecast =  {
       "time"=>1564671600,
       "summary"=>"Mostly Cloudy",
       "icon"=>"partly-cloudy-day",
@@ -24,7 +24,7 @@ RSpec.describe HourlyForecast, type: :model do
   end
 
   it "test attributes" do
-    current_weather = HourlyForecast.new(@current_weather_hash )
+    current_weather = HourlyForecast.new(@hourly_weather_forecast )
     expect(current_weather.hour).to eq(9)
     expect(current_weather.icon).to eq("partly-cloudy-day")
     expect(current_weather.temperature).to eq(72.26)
