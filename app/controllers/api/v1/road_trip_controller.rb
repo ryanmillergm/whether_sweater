@@ -1,4 +1,6 @@
 class Api::V1::RoadTripController < ApplicationController
+  skip_before_action :verify_authenticity_token, raise: false
+
   def create
     user = User.find_by(api_key: road_trip_params[:api_key])
     if user.nil?
