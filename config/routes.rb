@@ -11,4 +11,6 @@ Rails.application.routes.draw do
       resources :road_trip, only: [:create]
     end
   end
+  
+  match "*path", to: "application#render_not_found", via: :all
 end

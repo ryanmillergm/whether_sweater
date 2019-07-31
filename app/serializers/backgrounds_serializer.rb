@@ -1,5 +1,4 @@
 class BackgroundsSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :id,
-             :background
+  attributes :get_background
 end

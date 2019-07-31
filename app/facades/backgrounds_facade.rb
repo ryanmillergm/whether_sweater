@@ -6,7 +6,6 @@ class BackgroundsFacade
 
   def initialize(location)
     @location = location
-    @background = get_background
     @id = location
   end
 
@@ -19,6 +18,4 @@ class BackgroundsFacade
   def flickr_service
     @flickr ||= FlickrService.new
   end
-
-
 end

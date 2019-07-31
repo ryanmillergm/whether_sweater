@@ -9,7 +9,12 @@ RSpec.describe 'Forecasts' do
 
     weather = JSON.parse(response.body, symbolize_names: true)
 
+    attributes = [:time, :summary, :icon, :precip_probablility, :temperature, :apparent_temperature, :humidity, :uv_index, :visibility]
+
     expect(weather[:data][:attributes][:location]).to eq("denver,co")
+
+    expect(weather[:data][:attributes].keys).to match_array([:location, :current_weather, :hourly_forecast, :daily_forecast])
+    expect(weather[:data][:attributes][:current_weather].keys).to match_array(attributes)
   end
 
   it 'gets latitude and longitude from geocoding' do

@@ -17,6 +17,11 @@ RSpec.describe "Google and Weather API" do
     expect(response).to be_successful
     forecast = JSON.parse(response.body, symbolize_names: true)
 
+    attributes = [:temperature, :summary, :travel_time]
+
+    expect(forecast[:data][:id]).to eq("Destination's forecasted weather upon arrival")
+
+    expect(forecast[:data][:attributes][:get_road_trip_forecast].keys).to match_array(attributes)
   end
 
   it "can forecast the weather of a location at the time of expected arrival" do
