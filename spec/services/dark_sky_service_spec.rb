@@ -6,8 +6,7 @@ RSpec.describe DarkSkyService do
       lat: 39.729431,
       lng: -104.831917
     }
-    @forecast_coordinates = Coordinates.new(@coordinates)
-    @dark_sky_service = DarkSkyService.new(@forecast_coordinates)
+    @dark_sky_service = DarkSkyService.new(@coordinates)
   end
 
   it 'exists' do

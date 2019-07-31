@@ -1,0 +1,22 @@
+{:data=>
+
+  {:id=>"denver,co",
+   :type=>"backgrounds",
+   :attributes=>
+    {:get_background=>
+      {:photos=>
+        {:page=>1,
+         :pages=>889004,
+         :perpage=>1,
+         :total=>"889004",
+         :photo=>
+          [{:id=>"48418393857",
+            :owner=>"107023868@N08",
+            :secret=>"188c581cc9",
+            :server=>"65535",
+            :farm=>66,
+            :title=>"ILoveFashion Photocontest – (sukibombuki Resident)”",
+            :ispublic=>1,
+            :isfriend=>0,
+            :isfamily=>0}]},
+       :stat=>"ok"}}}}
