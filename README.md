@@ -6,7 +6,7 @@ This app allows users to create an account & login, as well as fetch the forecas
 
 The app is deployed at https://whether-a-sweater.herokuapp.com/.
 
-This project was part of Turing School of Software & Design's Back End Engineering program. See project spec [here](https://backend.turing.io/module3/projects/sweater_weather). It was completed in 7 days by Ryan Miller. This is a backend project built using Ruby on Rails.
+This project was part of Turing School of Software & Design's Back End Engineering program. I This is a backend project built using Ruby on Rails.
 
 View the project at https://backend.turing.io/module3/projects/sweater_weather.
 
