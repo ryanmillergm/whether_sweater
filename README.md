@@ -8,6 +8,9 @@ This project was part of Turing School of Software & Design's Back End Engineeri
 
 View the project board at https://github.com/chakeresa/express_sweater_weather/projects/1.
 
+Here is a wireframe for the project:
+![wireframe](./public/weather_frame.png)
+
 Things you may want to cover:
 
 * Ruby version
