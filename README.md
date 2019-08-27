@@ -8,7 +8,7 @@ The app is deployed at https://whether-a-sweater.herokuapp.com/.
 
 This project was part of Turing School of Software & Design's Back End Engineering program. See project spec [here](https://backend.turing.io/module3/projects/sweater_weather). It was completed in 7 days by Ryan Miller. This is a backend project built using Ruby on Rails.
 
-View the project board at https://github.com/chakeresa/express_sweater_weather/projects/1.
+View the project board at https://backend.turing.io/module3/projects/sweater_weather.
 
 Here is a wireframe for the project:
 ![wireframe](./public/weather_frame.png)
