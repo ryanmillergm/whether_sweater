@@ -2,7 +2,7 @@
 
 ## README
 
-This app allows users to create an account & login, as well as fetch the forecast for a location and future forecast for a destination upon arrival using google maps and dark sky api. 
+This app allows users to create an account & login, as well as fetch the forecast for a location and future forecast for a destination upon arrival using google geocoding and dark sky api. This app utilizes the yelp and google maps api's to find restaurants that are open upon arrival. The Flickr api is used to retrieve a background image of a city.
 
 The app is deployed at https://whether-a-sweater.herokuapp.com/.
 
