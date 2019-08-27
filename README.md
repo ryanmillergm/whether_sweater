@@ -13,17 +13,20 @@ View the project at https://backend.turing.io/module3/projects/sweater_weather.
 Here is a wireframe for the project:
 ![wireframe](./public/weather_frame.png)
 
-Things you may want to cover:
-
-
-* Ruby version: 2.4.1p111
-
-* System dependencies
- - UNIX terminal
-
-* Configuration
+To install: 
+ - `clone this repo`
  - `$bundle`
  - `$bundle exec figaro install`
+ 
+ * Database creation
+ - `$bundle exec rails db:create`
+
+* Database initialization
+ - `$bundle exec rails db:migrate`
+
+* How to run the test suite
+ - `$bundle exec rspec`
+ 
  - Add your own API keys to `config/application.yml`:
  ```yml
 GOOGLE_MAPS_API_KEY: <your google maps API key>
@@ -34,20 +37,7 @@ YELP_CLIENT_ID: <your yelp client ID>
 YELP_API_KEY: <your yelp API key>
  ```
 
-* Database creation
- - `$bundle exec rails db:create`
-
-* Database initialization
- - `$bundle exec rails db:migrate`
-
-* How to run the test suite
- - `$bundle exec rspec`
-
-* Services (job queues, cache servers, search engines, etc.)
- - To enable caching in the development environment, run `$rails dev:cache` once
- - In one terminal, run `$redis-server` (may need to do `$brew update && brew install redis` first)
- - In another terminal, run `$bundle exec sidekiq`
- - Initiate the daily image database refresh by running `$rake simple_scheduler`
+* Ruby version: 2.4.1p111
 
 * Deployment instructions
  - `$git push heroku master`
