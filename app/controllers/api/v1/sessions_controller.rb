@@ -5,7 +5,7 @@ class Api::V1::SessionsController < ApplicationController
     user = User.find_by(email: session_params[:email])
     if user&.authenticate(session_params[:password])
       session[:user_id] = user.id
-      render json: {api_key: user.api_key}, status: :created
+      render json: UserResponse.new(user).render_response, status: :created
     else
       render json: { message: "email or password was invalid" }, status: 401
     end
