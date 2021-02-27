@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'welcome#index'
 
-  post '/api/v1/road_trip', to: 'api/v1/road_trip#create'
   namespace :api do
     namespace :v1 do
       resources :forecast, only: [:index]
