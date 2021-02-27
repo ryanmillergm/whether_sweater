@@ -13,7 +13,7 @@ class GoogleGeocodingService
   def parameters
     {
       address: @location,
-      key: ENV['GEOCODING_API']
+      key: ENV['GOOGLE_MAPS_API_KEY']
     }
   end
 
