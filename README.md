@@ -238,4 +238,3 @@ YELP_API_KEY: <your yelp API key>
  - `$git push heroku master`
  - Add ENV variables with `$heroku config:set <KEY>=<value>`
 
-
