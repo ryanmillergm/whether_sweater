@@ -24,9 +24,6 @@ default: &default
 development:
   <<: *default
   database: whether_sweater_development
-  username: <%= ENV['DB_USER'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
-  <%= ENV['DATABASE_URL'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -61,9 +58,6 @@ development:
 test:
   <<: *default
   database: whether_sweater_test
-  username: <%= ENV['DB_USER'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
-  <%= ENV['DATABASE_URL'] %>
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -87,5 +81,5 @@ test:
 production:
   <<: *default
   database: whether_sweater_production
-  username: <%= ENV['DB_USER'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
+  username: whether_sweater
+  password: <%= ENV['WHETHER_SWEATER_DATABASE_PASSWORD'] %>
